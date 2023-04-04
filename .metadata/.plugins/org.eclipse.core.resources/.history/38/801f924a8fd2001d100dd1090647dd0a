@@ -1,0 +1,9 @@
+/**
+ * 
+ */
+/**
+ * @author euiyeob
+ *
+ */
+module BasicJava {
+}

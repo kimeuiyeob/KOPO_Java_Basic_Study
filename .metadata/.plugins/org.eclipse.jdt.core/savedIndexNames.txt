@@ -1,0 +1,4 @@
+INDEX VERSION 1.131+C:\Users\euiyeob\Desktop\김규석 자바수업\javaBasicWorkSpace\.metadata\.plugins\org.eclipse.jdt.core
+1865797976.index
+2114095709.index
+2108233386.index
