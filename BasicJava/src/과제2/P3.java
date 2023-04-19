@@ -3,9 +3,9 @@ package 과제2;
 import java.util.Scanner;
 
 public class P3 {
-	
+
 	public static void main(String[] args) {
-		
+
 		Scanner sc = new Scanner(System.in);
 
 		int payMoney;
@@ -31,14 +31,12 @@ public class P3 {
 		int money10 = 0;
 
 		int won10000 = recieveMoney / 10000;
-		int won5000 = (recieveMoney - (won10000 * 10000)) / 5000;
-		int won1000 = (recieveMoney - (won10000 * 10000) - (won5000 * 5000)) / 1000;
-		int won500 = (recieveMoney - (won10000 * 10000) - (won5000 * 5000) - (won1000 * 1000)) / 500;
-		int won100 = (recieveMoney - (won10000 * 10000) - (won5000 * 5000) - (won1000 * 1000) - (won500 * 500)) / 100;
-		int won50 = (recieveMoney - (won10000 * 10000) - (won5000 * 5000) - (won1000 * 1000) - (won500 * 500)
-				- (won100 * 100)) / 50;
-		int won10 = (recieveMoney - (won10000 * 10000) - (won5000 * 5000) - (won1000 * 1000) - (won500 * 500)
-				- (won100 * 100) - (won50 * 50)) / 10;
+		int won5000 = (recieveMoney % 10000) / 5000;
+		int won1000 = ((recieveMoney % 10000) % 5000) / 1000;
+		int won500 = ((recieveMoney % 10000) % 5000) % 1000 / 500;
+		int won100 = (((recieveMoney % 10000) % 5000) % 1000) % 500 / 100;
+		int won50 = ((((recieveMoney % 10000) % 5000) % 1000) % 500) % 100 / 50;
+		int won10 = (((((recieveMoney % 10000) % 5000) % 1000) % 500) % 100 % 50) / 10;
 
 		System.out.println("돌려받으실 10000원은 " + won10000 + "장입니다.");
 		System.out.println("돌려받으실 5000원은 " + won5000 + "장입니다.");

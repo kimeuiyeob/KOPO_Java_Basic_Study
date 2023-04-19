@@ -41,7 +41,7 @@ public class P9 {
 
 		fw.write(today + " , ");
 
-		fi.read(content); 
+		fi.read(content);
 		String allLine = new String(content);
 		System.out.println(allLine);
 

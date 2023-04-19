@@ -20,11 +20,11 @@ public class A8 {
 //      1 : 6
 //      2 : 7
 //      3 : 5
-		
+
 		try {
 			String text1 = inputSc1();
 			String text2 = inputSc1();
-			
+
 			countWordLength1(text1); // 첫번째 text길이
 			countWordLength2(text2); // 두번째 text길이
 			countWordSame(text1, text2); // 같은 문자 갯수

@@ -43,7 +43,7 @@ public class P14 {
 			text = text.replaceAll(" a u", " an a");
 			System.out.println(text);
 
-		}else {
+		} else {
 			System.out.println(text);
 		}
 

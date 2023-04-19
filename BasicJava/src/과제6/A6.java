@@ -17,10 +17,9 @@ public class A6 {
 //		Print the number of elements from the Fibonacci Numbers
 
 		Scanner scanner = new Scanner(System.in);
-
 		while (true) {
 			int num = scanner.nextInt();
-			int[] arr = new int[num + 1];
+			int[] arr = new int[num];
 			for (int i = 0; i < arr.length; i++) {
 				if (i == 0) {
 					arr[0] = 0;
@@ -29,10 +28,8 @@ public class A6 {
 				} else {
 					arr[i] = arr[i - 1] + arr[i - 2];
 				}
+				System.out.println(arr[i]);
 			}
-			System.out.println(arr[num]);
 		}
-
 	}
-
 }

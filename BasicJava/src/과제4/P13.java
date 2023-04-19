@@ -16,37 +16,37 @@ public class P13 {
 //		I go to school by subway but it takes a very long time to go to school.
 //		cool
 //		2
-		
+
 		Scanner sc = new Scanner(System.in);
 		String inputSentence = sc.nextLine();
 		String inputWord = sc.next();
 
-		int result = _findNumWords(inputSentence, inputWord);
+		int result = findNumWords(inputSentence, inputWord);
 		System.out.println("결과 : " + result);
 	}
 
-	private static int _findNumWords(String inputSentence, String inputWord) {
+	private static int findNumWords(String inputSentence, String inputWord) {
 		String[] strArray = inputSentence.split(" ");
 		int totalCount = 0;
 		for (String str : strArray) {
-			totalCount += _getCountWord1ContainsWord2(str, inputWord);
+			totalCount += getCountWord1ContainsWord2(str, inputWord);
 		}
 		return totalCount;
 	}
 
-	private static int _getCountWord1ContainsWord2(String word1, String word2) {
+	private static int getCountWord1ContainsWord2(String word1, String word2) {
 		if (word1.length() < word2.length()) {
 			return 0;
 		}
-		Map<Character, Integer> map = _getCharacterMapOfWord(word1);
+		Map<Character, Integer> map = getCharacterMapOfWord(word1);
 		int count = 0;
-		while (_removeWordLettersFromMap(map, word2)) {
+		while (removeWordLettersFromMap(map, word2)) {
 			count++;
 		}
 		return count;
 	}
 
-	private static Map<Character, Integer> _getCharacterMapOfWord(String word) {
+	private static Map<Character, Integer> getCharacterMapOfWord(String word) {
 		Map<Character, Integer> map = new HashMap<>();
 		for (char ch : word.toCharArray()) {
 			if (map.containsKey(ch)) {
@@ -59,7 +59,7 @@ public class P13 {
 		return map;
 	}
 
-	private static boolean _removeWordLettersFromMap(Map<Character, Integer> map, String word) {
+	private static boolean removeWordLettersFromMap(Map<Character, Integer> map, String word) {
 		boolean result = false;
 		List<Character> characterListToRemove = new ArrayList<>();
 		for (char ch : word.toCharArray()) {
